@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gotest1227-gitops
+  description: This is GitOps manifest for gotest1227   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: gotest1227
+    backstage.io/kubernetes-id: gotest1227 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: gotest1227   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:gotest1227
